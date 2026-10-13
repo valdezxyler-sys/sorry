@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Letter From My Heart</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=IM+Fell+English:ital@0;1&display=swap" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 35px 14px;
+    background: #29231d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Georgia, serif;
+}
+
+/* Vintage paper */
+.paper {
+    position: relative;
+    width: 100%;
+    max-width: 720px;
+    min-height: 900px;
+    padding: 65px 60px;
+    color: #382719;
+    background:
+        radial-gradient(ellipse at 15% 20%,
+            rgba(130, 83, 37, .12), transparent 45%),
+        radial-gradient(ellipse at 85% 80%,
+            rgba(130, 83, 37, .13), transparent 40%),
+        linear-gradient(105deg, #f1e2bd, #f8edcf 45%, #ead6ad);
+    box-shadow:
+        0 0 0 1px #b89b6a,
+        0 0 0 7px #493522,
+        0 18px 45px rgba(0,0,0,.55);
+    overflow-wrap: break-word;
+}
+
+/* Inner ornamental border */
+.paper::before {
+    content: "";
+    position: absolute;
+    inset: 17px;
+    border: 1px solid rgba(105, 70, 37, .42);
+    pointer-events: none;
+}
+
+.top-ornament {
+    text-align: center;
+    font-size: 23px;
+    letter-spacing: 8px;
+    color: #87613b;
+    margin-bottom: 28px;
+}
+
+.date {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    text-align: right;
+    font-size: 17px;
+    margin-bottom: 42px;
+    color: #61462d;
+}
+
+.heading {
+    font-family: 'Great Vibes', cursive;
+    font-size: clamp(38px, 8vw, 55px);
+    text-align: center;
+    font-weight: normal;
+    margin: 0 0 38px;
+    color: #593820;
+}
+
+.letter {
+    font-family: 'IM Fell English', serif;
+    font-size: 21px;
+    line-height: 1.9;
+    letter-spacing: .15px;
+}
+
+.salutation {
+    font-family: 'Great Vibes', cursive;
+    font-size: 35px;
+    margin-bottom: 18px;
+}
+
+.letter p {
+    margin: 0 0 22px;
+    text-indent: 30px;
+}
+
+.letter p.no-indent {
+    text-indent: 0;
+}
+
+.signature {
+    margin-top: 38px;
+    text-align: right;
+    padding-right: 12px;
+}
+
+.signature .closing {
+    font-family: 'IM Fell English', serif;
+    font-style: italic;
+    font-size: 19px;
+}
+
+.signature .name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 39px;
+    margin-top: 12px;
+}
+
+.bottom-ornament {
+    text-align: center;
+    margin-top: 45px;
+    color: #87613b;
+    letter-spacing: 7px;
+}
+
+.controls {
+    margin: 30px 0;
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    padding: 12px 20px;
+    border: 1px solid #d5bc91;
+    background: #60452d;
+    color: #fff0d2;
+    border-radius: 5px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #7c5a39;
+}
+
+.hint {
+    color: #e8d9c4;
+    text-align: center;
+    font: 13px Arial, sans-serif;
+    margin: 0 0 25px;
+}
+
+[contenteditable="true"]:focus {
+    outline: 1px dashed #9a7447;
+    outline-offset: 4px;
+}
+
+@media (max-width: 550px) {
+    body {
+        padding: 22px 14px;
+    }
+
+    .paper {
+        min-height: auto;
+        padding: 48px 29px;
+    }
+
+    .paper::before {
+        inset: 10px;
+    }
+
+    .letter {
+        font-size: 18px;
+        line-height: 1.85;
+    }
+
+    .date {
+        font-size: 15px;
+        margin-bottom: 32px;
+    }
+
+    .salutation {
+        font-size: 31px;
+    }
+}
+
+@media print {
+    body {
+        background: white;
+        padding: 0;
+    }
+
+    .paper {
+        width: 100%;
+        max-width: none;
+        min-height: 100vh;
+        box-shadow: none;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+
+    .controls, .hint {
+        display: none;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="paper">
+
+    <div class="top-ornament">❦ ❧ ❦</div>
+
+    <div class="date" contenteditable="true">
+        October 13, 2026
+    </div>
+
+    <h1 class="heading" contenteditable="true">
+        A simple letterrr
+    </h1>
+
+    <div class="letter">
+
+        <div class="salutation" contenteditable="true">
+            My Dearest,
+        </div>
+
+        <p contenteditable="true">
+            I have been thinking about the things that happened
+            between us, and I find myself searching for the right
+            words to express what my heart truly wishes to say.
+        </p>
+
+        <p contenteditable="true">
+            I am sorry for the times I have hurt you, especially
+            when I should have been more thoughtful of your feelings.
+            I know that saying sorry cannot simply erase the pain
+            I have caused, and I do not expect a few words to make
+            everything right again.
+        </p>
+
+        <p contenteditable="true">
+            If there is one thing I wish you to understand, it is
+            that your feelings matter to me. I never want you to
+            feel as though your hurt is unimportant or that your
+            patience is something I may take for granted.
+        </p>
+
+        <p contenteditable="true">
+            I know that an apology means little if the same mistakes
+            continue to happen. That is why I want to learn from
+            this, to listen more carefully, to be more mindful of
+            my actions, and to show through my efforts what my
+            words alone cannot prove.
+        </p>
+
+        <p contenteditable="true">
+            I cannot promise that I will always be perfect, but
+            I can promise to take responsibility when I fall short
+            and to keep trying to become someone who makes you
+            feel loved, respected, and understood.
+        </p>
+
+        <p contenteditable="true">
+            I do not write this letter to pressure you to forgive
+            me immediately. I only hope that, in time, my sincerity
+            will be seen not merely in the words written upon this
+            paper, but in the way I choose to treat you each day.
+        </p>
+
+        <p contenteditable="true">
+            Thank you for the place you hold in my life. I am truly
+            sorry for the hurt I have caused, and I hope I may have
+            the chance to make things better, one sincere effort
+            at a time.
+        </p>
+
+    </div>
+
+    <div class="signature">
+        <div class="closing" contenteditable="true">
+            With all my sincerity,
+        </div>
+        <div class="name" contenteditable="true">
+            Yours, always
+        </div>
+    </div>
+
+    <div class="bottom-ornament">— ❦ —</div>
+
+</div>
+
+<button onclick="window.location.href='sorry.html'">
+  back
+</button>
+
+</body>
+</html>
